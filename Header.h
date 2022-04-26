@@ -32,7 +32,7 @@ public:
 
 	double nalog() override
 	{
-		return (1 / 1000) * GetWorth();
+		return 0.001 * GetWorth();
 	}
 };
 
@@ -43,7 +43,7 @@ public:
 
 	double nalog() override
 	{
-		return (1 / 200) * GetWorth();
+		return 0.005 * GetWorth();
 	}
 };
 
@@ -54,7 +54,7 @@ public:
 
 	double nalog() override
 	{
-		return (1 / 500) * GetWorth();
+		return 0.002 * GetWorth();
 	}
 };
 
