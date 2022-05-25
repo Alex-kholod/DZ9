@@ -6,23 +6,21 @@ using namespace std;
 
 class Property
 {
-	int worth = 0;
-
+protected:
+	int worth;
+	double nal;
 public:
-	Property(double worth)
-	{
-		SetWorth(worth);
-	}
+	Property(double worth) : worth(worth) {}
 	void SetWorth(double a)
 	{
-		Property::worth = a;
+		worth = a;
 	}
 	double GetWorth()
 	{
 		return worth;
 	}
 	virtual double nalog() = 0;
-	virtual ~Property() {}
+	virtual ~Property() = default;
 };
 
 class Apartment : public Property
@@ -32,7 +30,9 @@ public:
 
 	double nalog() override
 	{
-		return 0.001 * GetWorth();
+		double a = 0.001 * GetWorth();
+		nal = a;
+		return a;
 	}
 };
 
