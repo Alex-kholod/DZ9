@@ -7,8 +7,8 @@ using namespace std;
 class Property
 {
 protected:
-	int worth;
-	double nal;
+	double worth;
+	
 public:
 	Property(double worth) : worth(worth) {}
 	void SetWorth(double a)
@@ -25,8 +25,11 @@ public:
 
 class Apartment : public Property
 {
+	double nal;
 public:
-	Apartment(double worth) : Property(worth) {}
+	Apartment(double worth) : Property(worth) {
+		nal = nalog();
+	}
 
 	double nalog() override
 	{
